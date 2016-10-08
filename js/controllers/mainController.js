@@ -3,9 +3,9 @@ function mainController($scope) {
     $scope.title = "Tableau AngularJS";
     $scope.students = [
       {
-        "nom":"Paul",
-        "prenom":"DE BARTHEZ",
-        "email":"ipolomac@me.com"
+        "nom":"test",
+        "prenom":"Paul",
+        "email":"email@exemple.com"
       }
     ]
 
