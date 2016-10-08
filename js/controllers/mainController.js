@@ -22,4 +22,9 @@ function mainController($scope) {
         $scope.prenom ="";
         $scope.email ="";
     }
+    $scope.delete = function($index) {
+
+      $scope.students.splice($index,1);
+
+    }
 };

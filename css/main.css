@@ -1,9 +1,22 @@
 h1 {
   font-style: italic;
+  text-align: center;
+  padding: 0 0 100px 0;
 }
 .ng-invalid.ng-dirty {
   border-color: red;
 }
 .ng-valid.ng-dirty {
   border-color: green;
+}
+table, th {
+  text-align: center;
+}
+.forms {
+
+  padding-bottom: 100px;
+}
+form button {
+
+  margin-top: 20px;
 }
