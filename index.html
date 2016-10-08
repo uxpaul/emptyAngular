@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html ng-app="app">
-    <head>
-        <meta charset="utf-8">
-        <title>Angular Project</title>
-        <script src="js/libs/angular.min.js"></script>
-        <script src="js/controllers/mainController.js"></script>
-        <script src="js/app.js"></script>
-    </head>
-    <body ng-controller='mainController'>
 
-    </body>
+<head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Angular Project</title>
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-controller='mainController'>
+
+  <h1> {{title}} </h1> <!-- Expression  AngularJs cd controller $scope.title = ""; -->
+    <form>
+        <div class="col-xs-8  col-lg-6 col-lg-offset-3">
+
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                        ng-model="email" required/>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name"
+                        ng-model="nom"/>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="surname" id="surname" placeholder="Prénom"
+                        ng-model="prenom"/>
+            </div>
+            <!-- <div class="input-group message">
+                <span class="input-group-addon"><i class="fa fa-commenting-o" aria-hidden="true"></i></span>
+                <textarea type="message" class="form-control" name="message" id="message" placeholder="What you feel !" rows="6"></textarea>
+            </div> -->
+            <button type="submit" class="subscribe-form-submit btn btn-primary btn-lg center-block" ng-click="add()">Ajouter</button>
+
+        </div>
+    </form>
+
+    <div class="container">
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Prenom</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Berry</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr ng-repeat="student in students">
+                    <td>{{student.prenom}}</td>
+                    <td>{{student.nom}}</td>
+                    <td>{{student.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
 </html>
